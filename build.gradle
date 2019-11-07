@@ -11,8 +11,8 @@ buildscript {
     }
 }
 
-version "0.1"
-group "samplegrailsrestapi"
+version "0.1.0"
+group "es.xgani"
 
 apply plugin:"eclipse"
 apply plugin:"idea"
