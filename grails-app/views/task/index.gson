@@ -1,8 +1,8 @@
-import es.xgani.samplegrailsrestapi.Task
+import es.xgani.samplegrailsrestapi.dto.model.TaskDto
 
 model {
-    Iterable<Task> taskList
+    Iterable<TaskDto> taskDtoList
 }
 
-json tmpl.task(taskList ?: [])
+json tmpl.task(taskDtoList ?: [])
 

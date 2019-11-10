@@ -1,7 +1,11 @@
-import es.xgani.samplegrailsrestapi.Task
+import es.xgani.samplegrailsrestapi.dto.model.TaskDto
 
 model {
-    Task task
+    TaskDto task
 }
 
-json g.render(task, [resolveTemplate: false])
+json {
+    name task.name
+    description task.description
+    date task.date
+}

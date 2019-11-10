@@ -1,7 +1,7 @@
-import es.xgani.samplegrailsrestapi.Task
+import es.xgani.samplegrailsrestapi.dto.model.TaskDto
 
 model {
-    Task task
+    TaskDto taskDto
 }
 
-json tmpl.task(task)
+json tmpl.task(taskDto)
