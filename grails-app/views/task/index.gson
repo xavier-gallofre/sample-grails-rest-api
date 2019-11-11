@@ -1,4 +1,4 @@
-import es.xgani.samplegrailsrestapi.dto.model.TaskDto
+import es.xgani.samplegrailsrestapi.core.dto.model.TaskDto
 
 model {
     Iterable<TaskDto> taskDtoList

@@ -1,7 +1,7 @@
-package es.xgani.samplegrailsrestapi
+package es.xgani.samplegrailsrestapi.core
 
-import es.xgani.samplegrailsrestapi.dto.mapper.TaskMapper
-import es.xgani.samplegrailsrestapi.dto.model.TaskDto
+import es.xgani.samplegrailsrestapi.core.dto.mapper.TaskMapper
+import es.xgani.samplegrailsrestapi.core.dto.model.TaskDto
 import grails.gorm.transactions.Transactional
 
 @Transactional

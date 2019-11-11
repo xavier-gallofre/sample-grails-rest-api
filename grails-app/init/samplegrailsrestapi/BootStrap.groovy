@@ -1,6 +1,6 @@
 package samplegrailsrestapi
 
-import es.xgani.samplegrailsrestapi.Task
+import es.xgani.samplegrailsrestapi.core.Task
 
 class BootStrap {
 

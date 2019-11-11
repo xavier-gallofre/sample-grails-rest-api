@@ -1,4 +1,4 @@
-package es.xgani.samplegrailsrestapi
+package es.xgani.samplegrailsrestapi.core
 
 class Task {
 

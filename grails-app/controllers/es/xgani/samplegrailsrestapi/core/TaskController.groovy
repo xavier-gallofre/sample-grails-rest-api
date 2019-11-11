@@ -1,6 +1,7 @@
-package es.xgani.samplegrailsrestapi
+package es.xgani.samplegrailsrestapi.core
 
-import es.xgani.samplegrailsrestapi.dto.model.TaskDto
+
+import es.xgani.samplegrailsrestapi.core.dto.model.TaskDto
 
 class TaskController {
 

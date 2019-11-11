@@ -1,6 +1,6 @@
 package es.xgani.samplegrailsrestapi
 
-
+import es.xgani.samplegrailsrestapi.core.Task
 import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
 

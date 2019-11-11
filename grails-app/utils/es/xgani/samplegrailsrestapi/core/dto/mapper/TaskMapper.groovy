@@ -1,7 +1,7 @@
-package es.xgani.samplegrailsrestapi.dto.mapper
+package es.xgani.samplegrailsrestapi.core.dto.mapper
 
-import es.xgani.samplegrailsrestapi.Task
-import es.xgani.samplegrailsrestapi.dto.model.TaskDto
+import es.xgani.samplegrailsrestapi.core.Task
+import es.xgani.samplegrailsrestapi.core.dto.model.TaskDto
 
 class TaskMapper {
 

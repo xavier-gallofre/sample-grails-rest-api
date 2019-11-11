@@ -1,4 +1,4 @@
-package es.xgani.samplegrailsrestapi.dto.model
+package es.xgani.samplegrailsrestapi.core.dto.model
 
 class TaskDto {
 
