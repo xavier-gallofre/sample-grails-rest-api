@@ -2,16 +2,19 @@ package es.xgani.samplegrailsrestapi.core
 
 import es.xgani.samplegrailsrestapi.core.dto.mapper.TaskMapper
 import es.xgani.samplegrailsrestapi.core.dto.model.TaskDto
+import es.xgani.samplegrailsrestapi.core.repository.TaskRepository
 import grails.gorm.transactions.Transactional
 
 @Transactional
 class TaskService {
 
+    TaskRepository taskRepository
+
     List<TaskDto> findAll() {
-        Task.findAll().collect(TaskMapper.&toDto)
+        taskRepository.findAll().collect(TaskMapper.&toDto)
     }
 
     TaskDto findById(Long id) {
-        Task.findById(id).with(TaskMapper.&toDto)
+        taskRepository.findById(id).with(TaskMapper.&toDto)
     }
 }
