@@ -2,6 +2,7 @@ package es.xgani.samplegrailsrestapi.core
 
 import es.xgani.samplegrailsrestapi.core.dto.mapper.TaskMapper
 import es.xgani.samplegrailsrestapi.core.dto.model.TaskDto
+import es.xgani.samplegrailsrestapi.core.exception.TaskNotFoundException
 import es.xgani.samplegrailsrestapi.core.repository.TaskRepository
 import grails.gorm.transactions.Transactional
 
@@ -15,6 +16,10 @@ class TaskService {
     }
 
     TaskDto findById(Long id) {
-        taskRepository.findById(id).with(TaskMapper.&toDto)
+        Task task = taskRepository.findById(id)
+        if (!task) {
+            throw new TaskNotFoundException(id)
+        }
+        task.with(TaskMapper.&toDto)
     }
 }

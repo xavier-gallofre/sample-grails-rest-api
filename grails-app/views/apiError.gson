@@ -1,0 +1,11 @@
+import es.xgani.samplegrailsrestapi.core.exception.ApiError
+
+model {
+    ApiError apiError
+}
+
+json {
+    message apiError.getMessage()
+    timestamp apiError.getTimestamp()
+    status apiError.getStatus()
+}

@@ -1,6 +1,5 @@
 package es.xgani.samplegrailsrestapi.core
 
-
 import es.xgani.samplegrailsrestapi.core.dto.model.TaskDto
 
 class TaskController {
@@ -18,4 +17,5 @@ class TaskController {
         TaskDto task = taskService.findById(id)
         respond task
     }
+
 }
