@@ -10,4 +10,5 @@ interface TaskRepository {
 
     Task findById(Long id)
 
+    Number delete(Long id)
 }

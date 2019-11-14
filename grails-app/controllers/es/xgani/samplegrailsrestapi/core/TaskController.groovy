@@ -18,4 +18,8 @@ class TaskController {
         respond task
     }
 
+    def delete(Long id) {
+        taskService.delete(id)
+        render [:]
+    }
 }

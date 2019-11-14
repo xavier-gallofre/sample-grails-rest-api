@@ -22,4 +22,8 @@ class TaskService {
         }
         task.with(TaskMapper.&toDto)
     }
+
+    void delete(Long id) {
+        taskRepository.delete(id)
+    }
 }
