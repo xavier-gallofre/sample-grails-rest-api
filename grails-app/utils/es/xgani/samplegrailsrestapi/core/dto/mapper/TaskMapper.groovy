@@ -2,6 +2,7 @@ package es.xgani.samplegrailsrestapi.core.dto.mapper
 
 import es.xgani.samplegrailsrestapi.core.Task
 import es.xgani.samplegrailsrestapi.core.dto.model.TaskDto
+import es.xgani.samplegrailsrestapi.core.request.TaskRequest
 
 class TaskMapper {
 
@@ -11,6 +12,14 @@ class TaskMapper {
                 name: task.name,
                 description: task.description,
                 date: task.date
+        )
+    }
+
+    static TaskDto toDto(TaskRequest taskRequest) {
+        new TaskDto(
+                name: taskRequest.name,
+                description: taskRequest.description,
+                date: taskRequest.dueDate
         )
     }
 }

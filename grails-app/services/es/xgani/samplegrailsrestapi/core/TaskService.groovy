@@ -23,6 +23,15 @@ class TaskService {
         task.with(TaskMapper.&toDto)
     }
 
+    TaskDto create(TaskDto taskDto) {
+        Task task = new Task(
+                name: taskDto.name,
+                description: taskDto.description,
+                date: taskDto.date
+        )
+        TaskMapper.toDto(taskRepository.save(task))
+    }
+
     void delete(Long id) {
         taskRepository.delete(id)
     }

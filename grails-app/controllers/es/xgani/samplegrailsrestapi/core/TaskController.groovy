@@ -1,6 +1,8 @@
 package es.xgani.samplegrailsrestapi.core
 
+import es.xgani.samplegrailsrestapi.core.dto.mapper.TaskMapper
 import es.xgani.samplegrailsrestapi.core.dto.model.TaskDto
+import es.xgani.samplegrailsrestapi.core.request.TaskRequest
 
 class TaskController {
 
@@ -15,6 +17,11 @@ class TaskController {
 
     def show(Long id) {
         TaskDto task = taskService.findById(id)
+        respond task
+    }
+
+    def save(TaskRequest taskRequest) {
+        TaskDto task = taskService.create(TaskMapper.toDto(taskRequest))
         respond task
     }
 

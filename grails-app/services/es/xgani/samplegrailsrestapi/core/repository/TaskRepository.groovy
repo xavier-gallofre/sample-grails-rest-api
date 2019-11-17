@@ -10,5 +10,7 @@ interface TaskRepository {
 
     Task findById(Long id)
 
+    Task save(Task task)
+
     Number delete(Long id)
 }
