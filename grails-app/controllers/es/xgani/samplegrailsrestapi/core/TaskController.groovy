@@ -25,6 +25,11 @@ class TaskController {
         respond task
     }
 
+    def update(Long id, TaskRequest taskRequest) {
+        TaskDto task = taskService.update(id, TaskMapper.toDto(taskRequest))
+        respond task
+    }
+
     def delete(Long id) {
         taskService.delete(id)
         render [:]

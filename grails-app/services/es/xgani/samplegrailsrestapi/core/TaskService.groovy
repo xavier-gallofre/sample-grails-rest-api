@@ -24,15 +24,27 @@ class TaskService {
     }
 
     TaskDto create(TaskDto taskDto) {
-        Task task = new Task(
-                name: taskDto.name,
-                description: taskDto.description,
-                date: taskDto.date
-        )
+        Task task = new Task()
+        fill(task, taskDto)
         TaskMapper.toDto(taskRepository.save(task))
     }
 
     void delete(Long id) {
         taskRepository.delete(id)
+    }
+
+    TaskDto update(Long id, TaskDto taskDto) {
+        Task task = taskRepository.findById(id)
+        if (!task) {
+            throw new TaskNotFoundException(id)
+        }
+        fill(task, taskDto)
+        task.with(TaskMapper.&toDto)
+    }
+
+    protected void fill(Task task, TaskDto taskDto) {
+        task.name = taskDto.name
+        task.description = taskDto.description
+        task.date = taskDto.date
     }
 }
