@@ -1,3 +1,3 @@
 rootProject.name = 'sampleGrailsRestApi'
 
-include 'app'
+include 'app', 'security'
