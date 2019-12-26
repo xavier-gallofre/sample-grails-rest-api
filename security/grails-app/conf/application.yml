@@ -2,7 +2,7 @@
 grails:
   profile: rest-api
   codegen:
-    defaultPackage: es.xgani
+    defaultPackage: es.xgani.security
   gorm:
     reactor:
       # Whether to translate GORM events into Reactor events
