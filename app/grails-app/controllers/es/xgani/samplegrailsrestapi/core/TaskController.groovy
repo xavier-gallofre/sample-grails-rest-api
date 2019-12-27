@@ -3,7 +3,9 @@ package es.xgani.samplegrailsrestapi.core
 import es.xgani.samplegrailsrestapi.core.dto.mapper.TaskMapper
 import es.xgani.samplegrailsrestapi.core.dto.model.TaskDto
 import es.xgani.samplegrailsrestapi.core.request.TaskRequest
+import grails.plugin.springsecurity.annotation.Secured
 
+@Secured('ROLE_ADMIN')
 class TaskController {
 
     TaskService taskService
